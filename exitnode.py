@@ -5,7 +5,8 @@ import socket
 import json
 from datetime import datetime
 
-PORT = 6008
+import os
+PORT = int(os.environ.get("PORT", 6008))
 
 class ExitNodeHandler(BaseHTTPRequestHandler):
     def log_message(self, format, *args):
